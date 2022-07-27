@@ -1,0 +1,94 @@
+<html xmlns:th="https://thymeleaf.org/">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BusTicket</title>
+
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/user/user.css">
+
+
+</head>
+<body class="height-auto">
+
+
+    <a th:href="@{/user/index}" class="home">HomePage</a>
+
+
+    <div class="index user-other">
+        <h1 style="margin-bottom: 0px;">Информация о поездке</h1>
+
+        <div class="row">
+
+            <label><span class="label-description">Route</span> : <span th:text="${selectedRoute.cities}"></span></label>
+            <label><span class="label-description">#Bus</span> : <span th:text="${selectedRoute.busNumber}"></span></label>
+            <label><span class="label-description">Date</span> : <span th:text="${selectedRoute.date}"></span></label>
+            <label><span class="label-description">Time Start</span> : <span th:text="${selectedRoute.timeStart}"></span></label>
+            <label><span class="label-description">Time End</span> : <span th:text="${selectedRoute.timeEnd}"></span></label>
+
+            <label><span class="label-description">Duration of trip</span> : <span th:text="${trip_duration}"></span></label>
+<!--            <label>Available seats: 20/40</label>           dataBase-->
+            <label><span class="label-description">Price (seat)</span>: 2000tg</label>
+            <label><span class="label-description">Driver Name</span> : <span th:text="${driverName}"></span></label>
+
+
+
+
+            <form th:action="@{/user/payment}" >
+                <div class="row">
+                    <div class="col-2">
+                        <label for="bookingName"><b>bookingName (бронь на имя):</b></label>
+                    </div>
+                    <div class="col-4">
+                        <input type="text" name="bookingName" id="bookingName"
+                               class="form-control" placeholder="Enter bookingName"        value=""/>
+                                                                                      <!-- value="kabbvs" -->
+                    </div>
+                </div>
+
+                <div class="row         hidden">
+                    <div class="col-2">
+                        <label for="scheduleId"><b>scheduleId</b></label>
+                    </div>
+                    <div class="col-4">
+                        <input type="text" name="scheduleId" id="scheduleId"
+                               class="form-control"  th:value="${selectedRoute.id}"/>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-2">
+                        <label for="seats"><b>seats</b></label>
+                    </div>
+                    <div class="col-4">
+                        <input type="text" name="seats" id="seats"
+                               class="form-control" placeholder=""             value=""/>
+                                                                                     <!-- value="kabbvs" -->
+                    </div>
+                </div>
+
+                <div class="row           ">
+                    <div class="col-2">
+                        <label for="price"><b>price</b></label>
+                    </div>
+                    <div class="col-4">
+                        <input type="text" name="price" id="price"
+                               class="form-control"                 value=""/>
+                                                               <!-- value="2000" -->
+                    </div>
+                </div>
+
+
+                <input type="submit" value="Забронировать" class="custom-submit"/>
+            </form>
+
+
+        </div>
+
+
+<!--        <a th:href="@{/user/payment}">Забронировать</a>-->
+    </div>
+</body>
+</html>
