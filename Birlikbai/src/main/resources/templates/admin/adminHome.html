@@ -1,0 +1,68 @@
+<html xmlns:th="https://thymeleaf.org/">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AdminHome</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Nunito:600,700,900" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/admin/admin.css">
+</head>
+<body class="adminHome">
+
+<!--    <a th:href="@{/user/index}" class="home-adminPage" style="background-color: green">HomePage</a>-->
+    <a th:href="@{/logoutPage/}" class="logout" style="background-color: blue">logout</a>
+
+
+    <section class="flex-column">
+
+        <div class="flex-row text-center">
+            <h1>AdminHome</h1>
+
+            <a th:href="@{/admin/adminHome}" class= "btn btn-primary adminHome-refresh">Resresh List <i class="fa fa-refresh" aria-hidden="true"></i></a>
+        </div>
+
+
+        <div class="flex-row">
+            <div>
+                <div>
+                    <a th:href="@{/admin/adminBus/busList}" class="bg-primary">adminBus</a>
+                </div>
+
+                <div>
+                    <a th:href="@{/admin/adminDriver/driverList}" class="bg-primary">adminDriver</a>
+                </div>
+
+                <div>
+                    <a th:href="@{/admin/adminSchedule/scheduleList}" class="bg-primary">adminSchedule</a>
+                </div>
+
+                <div>
+                    <a th:href="@{/admin/adminBooking/bookingList}" class="bg-primary">adminBooking</a>
+                </div>
+            </div>
+
+            <div>
+                <label>Total bus: <span th:text="${totalBus}"></span></label>
+                <label>Total drivers: <span th:text="${totalDriver}"></span></label>
+                <label>Total schedules: <span th:text="${totalSchedule}"></span></label>
+                <label>Total bookings: <span th:text="${totalBooking}"></span></label>
+            </div>
+        </div>
+
+
+
+<!--        <a th:href="@{/user/index}" class="custom-submit">logout(На главную страницу)</a>-->
+    </section>
+
+</body>
+</html>
