@@ -1,0 +1,63 @@
+CREATE DATABASE variant1_Birlikbai;
+
+Create table bus(
+		id serial Primary Key NOT NULL,
+		number integer
+);
+
+Create table driver(
+		driverId serial Primary Key NOT NULL,
+		password varchar(100),
+		driverName varchar(100),
+		busId integer REFERENCES bus (id)
+);
+
+
+
+Create table schedule(
+		id serial Primary Key NOT NULl,
+		cities varchar(100),
+		busNumber integer,
+		date varchar(20),
+		timeStart varchar(5),
+		timeEnd varchar(5)		
+);
+
+Create table booking(
+		id serial Primary Key NOT NULl,
+		bookingName varchar(50),
+		seats varchar(100),
+		price integer,
+		scheduleId integer REFERENCES schedule (id) ON DELETE CASCADE
+);
+
+
+
+Create table admin(
+		id serial Primary Key NOT NULl,
+		login varchar(30),
+		password varchar(30)
+);
+
+INSERT INTO admin (login,password) VALUES ('admin', 'admin');
+
+
+Create table payment(
+		id serial Primary Key NOT NULl,
+		cardName varchar(100),
+		cardNumbers varchar(6),
+		cvc_cvv integer
+);
+
+INSERT INTO payment (cardName, cardNumbers, cvc_cvv) VALUES ('Birlikbai Alibek', '001', 123);
+INSERT INTO payment (cardName, cardNumbers, cvc_cvv) VALUES ('test', 'test', 123);
+
+
+
+--drop table bus;		--OneToOne
+--drop table driver;	--OneToOne
+
+--drop table booking;	   --ManyToOne
+--drop table schedule;	   --OneToMany
+
+--drop table admin,payment;

@@ -1,0 +1,44 @@
+<html xmlns:th="https://thymeleaf.org/">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Nunito:600,700,900" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="/css/login/login.css">
+    <link rel="stylesheet" href="/css/main.css">
+
+
+</head>
+<body id="body">
+
+    <a th:href="@{/user/index}" class="home-adminPage" style="background-color: green">HomePage</a>
+
+
+    <div id="login-card" class="card">
+        <div class="card-body">
+            <h2 class="text-center">Login as</h2>
+
+            <br>
+
+            <div class="flex">
+                <button class="btn btn-primary deep-purple btn-block button-custom"><a th:href="@{/admin/adminHome}">Admin</a></button>
+                <button class="btn btn-primary deep-purple btn-block button-custom"><a th:href="@{/loginPage/driver}">Driver</a></button>
+            </div>
+
+        </div>
+    </div>
+
+
+</body>
+</html>

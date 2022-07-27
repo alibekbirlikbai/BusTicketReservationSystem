@@ -1,0 +1,145 @@
+.user-other {
+    margin-top: 40px;
+}
+.label-description {
+    background-color: aqua;
+}
+
+
+/*index*/
+body {
+    flex-direction: column;
+}
+.index {
+    /*border: 1px solid black;*/
+    padding: 30px 100px;
+
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+h1 {
+    margin-bottom: 100px;
+}
+
+
+.row {
+    margin: 30px 0;
+}
+
+label {
+    font-size: 30px;
+}
+select {
+    margin-top: 5px;
+    font-size: 20px;
+}
+
+
+
+
+
+#selectedRoute {
+    border-radius: 5px;
+}
+
+.custom-submit {
+    border-radius: 5px;
+    border: none;
+
+    font-size: 30px;
+    margin-top: 10px;
+    padding: 5px;
+
+    color: #fff;
+    background-color: blue;
+
+    cursor: pointer;
+}
+
+
+
+
+
+/*buyTicket*/
+.height-auto {
+    height: auto;
+}
+
+#buyTicket-seat_select {
+    font-size: 30px;
+}
+
+
+
+
+
+
+/*.index {*/
+/*    border: 1px solid black;*/
+/*    padding: 20px 100px;*/
+
+/*}*/
+
+
+
+
+
+/*payment*/
+input {
+    margin-top: 5px;
+    font-size: 20px;
+}
+
+
+
+
+/*showTicket*/
+div {
+    display: flex;
+    flex-direction: column;
+}
+
+.ticket {
+    margin-top: 70px;
+
+    display: flex;
+    flex-direction: row;
+
+    border-radius: 10px;
+    background-color: #fff;
+
+    height: 380px;
+}
+.ticket-content {
+    /*border: 1px solid black;*/
+    padding: 0px 50px;
+    border-radius: 10px;
+
+    background-color: #fff;
+}
+.arrow-right {
+    width: auto;
+    height: auto;
+    border-top: 180px solid #5d8fc9;
+    border-bottom: 200px solid #5d8fc9;
+
+    border-left: 150px solid green;
+}
+.arrow-block {
+    height: 380px;
+    background-color: #fff;
+
+    border-left: 20px dashed green;
+}
+
+
+
+
+
+
+.row {
+    margin: 20px 0;
+}
+
+

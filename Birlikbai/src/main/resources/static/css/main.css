@@ -1,0 +1,79 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 500px;
+
+    background-color: #5d8fc9;
+}
+div {
+    display: flex;
+    flex-direction: column;
+}
+
+a {
+    text-decoration: none;
+
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 50px;
+    color: #fff;
+}
+
+
+
+.login {
+    background-color: blue;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+.logout {
+    background-color: blue;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+.home {
+    background-color: green;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+.home-index {
+    background-color: green;
+    position: absolute;
+    right: 160px;
+    top: 20px;
+}
+.home-adminPage {
+    background-color: green;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+}
+
+
+
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+
+
+
+
+
+
+.hidden {
+    display: none;
+}
+
