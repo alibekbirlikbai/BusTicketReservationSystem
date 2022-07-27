@@ -1,0 +1,103 @@
+<html xmlns:th="https://thymeleaf.org/">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShowTicket</title>
+
+    <link rel="stylesheet" href="/css/main.css">
+
+    <style>
+        div {
+            display: flex;
+            flex-direction: column;
+        }
+
+        body {
+            flex-direction: column;
+            height: auto;
+        }
+        .ticket {
+            margin-top: 70px;
+
+            display: flex;
+            flex-direction: row;
+        }
+        .ticket-content {
+            border: 1px solid black;
+            padding: 0px 100px;
+
+            background-color: aliceblue;
+        }
+        .arrow-right {
+            width: 0px;
+            height: 80px;
+            border-top: 190px solid transparent;
+            border-bottom: 190px solid transparent;
+
+            border-left: 150px solid green;
+        }
+
+
+
+        h1 {
+            margin-bottom: 100px;
+        }
+
+
+        .row {
+            margin: 20px 0;
+        }
+
+        label {
+            font-size: 30px;
+        }
+        select {
+            margin-top: 5px;
+            font-size: 20px;
+        }
+
+        .login {
+            background-color: blue;
+            position: absolute;
+            right: 20px;
+            top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<!--    <a href="" class="login">login</a>-->
+
+    <div class="ticket">
+        <div class="ticket-content">
+            <h1 style="margin-bottom: 0px;">Ticket</h1>
+
+
+            <div class="row">
+                <label>Booking Name: <span th:text="${bookingInput.bookingName}"></span></label>
+                <label>Seats: <span th:text="${bookingInput.seats}"></span></label>
+                <label>Price: <span th:text="${bookingInput.price}"></span></label>
+
+
+
+<!--                <label>Booking Name: Alibek Birlikbai</label>-->
+<!--                <label>Trip: Almaty - Taldykorgan</label>-->
+<!--                <label>#Bus: 18</label>-->
+<!--                <label>Time Start: 12:00</label>-->
+<!--                <label>Time End: 15:00</label>-->
+<!--                <label>#Seats: 13s, 14s, 15s, 16s</label>-->
+<!--                <label>Price: 8000tg</label>-->
+            </div>
+        </div>
+        <div class="arrow-right">
+
+        </div>
+    </div>
+
+    <a th:href="@{/user/index}">На главную станицу</a>
+
+
+</body>
+</html>
