@@ -1,0 +1,50 @@
+<html xmlns:th="https://thymeleaf.org/">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShowTicket</title>
+
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/user/user.css">
+
+
+</head>
+<body class="height-auto">
+
+
+    <a th:href="@{/user/index}" class="home">HomePage</a>
+
+
+    <div class="ticket">
+        <div class="ticket-content">
+            <h1 style="margin-bottom: 0px;">Ticket</h1>
+
+
+            <div class="row">
+                <label>Booking Name: <span th:text="${bookingInput.bookingName}"></span></label>
+                <label>Seats: <span th:text="${bookingInput.seats}"></span></label>
+                <label>Price: <span th:text="${bookingInput.price}"></span></label>
+
+
+
+<!--                <label>Booking Name: Alibek Birlikbai</label>-->
+<!--                <label>Trip: Almaty - Taldykorgan</label>-->
+<!--                <label>#Bus: 18</label>-->
+<!--                <label>Time Start: 12:00</label>-->
+<!--                <label>Time End: 15:00</label>-->
+<!--                <label>#Seats: 13s, 14s, 15s, 16s</label>-->
+<!--                <label>Price: 8000tg</label>-->
+            </div>
+        </div>
+        <div class="arrow-right">
+
+        </div>
+    </div>
+
+<!--    <a th:href="@{/user/index}">На главную станицу</a>-->
+
+
+</body>
+</html>
