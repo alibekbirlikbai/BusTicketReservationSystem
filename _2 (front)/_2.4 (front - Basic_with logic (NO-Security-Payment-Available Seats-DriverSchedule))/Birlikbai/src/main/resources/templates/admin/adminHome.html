@@ -1,0 +1,39 @@
+<html xmlns:th="https://thymeleaf.org/">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AdminHome</title>
+
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/admin/admin.css">
+</head>
+<body>
+
+    <div class="flex-column">
+        <h1>AdminHome</h1>
+
+        <div>
+            <div>
+                <a th:href="@{/adminBus/get/all}">adminBus</a>
+            </div>
+
+            <div>
+                <a th:href="@{/adminDriver/get/all}">adminDriver</a>
+            </div>
+
+            <div>
+                <a th:href="@{/adminSchedule/get/all}">adminSchedule</a>
+            </div>
+
+            <div>
+                <a th:href="@{/adminBooking/get/all }">adminBooking</a>
+            </div>
+        </div>
+
+        <a th:href="@{/index}">logout(На главную страницу)</a>
+    </div>
+
+</body>
+</html>
