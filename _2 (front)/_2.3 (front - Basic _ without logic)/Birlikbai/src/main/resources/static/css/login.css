@@ -1,0 +1,8 @@
+.button-custom{
+    border-radius:30px;
+    margin: 0;
+}
+.button-custom a {
+    text-decoration: none;
+    color: #fff;
+}
